@@ -3,56 +3,84 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>My Portfolio</title>
+    <title>Rami Adil - Odoo Developer</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<!-- ===== Header ===== -->
-<header>
-    <div class="container">
-        <h1>Welcome to My Portfolio</h1>
+
+<!-- ===== Navbar ===== -->
+<nav class="navbar">
+    <div class="container nav-container">
+        <a href="#home" class="logo">
+            <img src="images/ramilogo.png" alt="Rami Adil Logo"/> Rami Adil
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ===== Header / Hero ===== -->
+<header id="home" class="hero">
+    <div class="container hero-content">
+        <h1>Hi, I'm <span>Rami Adil</span></h1>
         <p>Full-Stack / Odoo Developer</p>
+        <a href="#projects" class="btn">See My Work</a>
     </div>
 </header>
 
 <!-- ===== About ===== -->
-<section id="about">
+<section id="about" class="section">
     <div class="container">
         <img src="images/profile.jpg" alt="Profile Photo" class="profile-pic"/>
-        <h2>About Me</h2>
-        <p>
-            I am Eg.Rami Adil an Odoo developer with experience in Python, JS, and business solutions.
-        </p>
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>
+                I am Eng. <strong>Rami Adil</strong>, an Odoo developer with strong skills in Python,
+                JavaScript, and building business solutions. I specialize in creating modules,
+                customizing workflows, and integrating Odoo with modern tech stacks.
+            </p>
+        </div>
     </div>
 </section>
 
 <!-- ===== Projects ===== -->
-<section id="projects">
+<section id="projects" class="section bg-light">
     <div class="container">
         <h2>Projects</h2>
-        <div class="project">
-            <img src="images/weight1.png" alt="Project 1"/>
-            <h3>Weight Filed to Sale Order Lines</h3>
-            <p>the challenge was to discover the overriding methods that responsible for computing the total price, with ths method you are going to discover also the method that responsible to calculate tax and modify the tax dictionary as well as the method that responsible for transfer these fields to the invoice module, and modify the report of invoice to accomidate or to receive weight filed  .</p>
-        </div>
-        <div class="project">
-            <img src="images/project2.png" alt="Project 2"/>
-            <h3>Project Title 2</h3>
-            <p>Short description of the project.</p>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="images/weight1.png" alt="Project 1"/>
+                <h3>Weight Field to Sale Order Lines</h3>
+                <p>
+                    A module enhancing Odoo Sales by computing totals based on weight, handling tax
+                    recalculations, and integrating with invoices and reports.
+                </p>
+            </div>
+            <div class="project-card">
+                <img src="images/project2.png" alt="Project 2"/>
+                <h3>Project Title 2</h3>
+                <p>
+                    Short description of the project and what technologies were used.
+                </p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- ===== Contact Form ===== -->
-<section id="contact">
+<!-- ===== Contact ===== -->
+<section id="contact" class="section">
     <div class="container">
         <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/your_form_id" method="POST">
+        <form action="https://formspree.io/f/your_form_id" method="POST" class="contact-form">
             <input type="text" name="name" placeholder="Your Name" required/>
             <input type="text" name="project" placeholder="Project Name" required/>
             <input type="tel" name="phone" placeholder="Phone Number" required/>
             <input type="email" name="_replyto" placeholder="Email" required/>
-            <button type="submit">Send</button>
+            <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+            <button type="submit" class="btn">Send Message</button>
         </form>
     </div>
 </section>
@@ -60,7 +88,7 @@
 <!-- ===== Footer ===== -->
 <footer>
     <div class="container">
-        <p>&copy; 2025 My Portfolio</p>
+        <p>&copy; 2025 Rami Adil | Odoo Developer</p>
     </div>
 </footer>
 
