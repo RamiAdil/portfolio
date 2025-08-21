@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
 <!-- ===== Navbar ===== -->
 <nav class="navbar">
     <div class="container nav-container">
@@ -53,20 +52,79 @@
         <h2>Projects</h2>
         <div class="project-grid">
             <div class="project-card">
-                <img src="images/weight1.png" alt="Project 1"/>
+                <img src="images/weight1.png" alt="Weight Field Code Snippet 1"/>
+                <img src="images/weight2.png" alt="Weight Field Code Snippet 2"/>
+                <img src="images/weight3.png" alt="Weight Field Code Snippet 3"/>
+                <img src="images/weight4.png" alt="Weight Field Code Snippet 4"/>
                 <h3>Weight Field to Sale Order Lines</h3>
-                <p>
-                    A module enhancing Odoo Sales by computing totals based on weight, handling tax
-                    recalculations, and integrating with invoices and reports.
-                </p>
+                <div class="project-details">
+                    <h4>Problem</h4>
+                    <p>Needed to calculate sale order totals based on product weight for accurate invoicing.</p>
+                    <h4>Solution</h4>
+                    <p>Developed an Odoo 18 module adding a weight field to sale.order.line, overriding _compute_amount,
+                        and updating QWeb reports.</p>
+                    <h4>Technologies</h4>
+                    <ul>
+                        <li>Python: Model logic and method overrides</li>
+                        <li>XML: Form and tree view modifications</li>
+                        <li>QWeb: Custom report templates</li>
+                    </ul>
+                    <h4>Impact</h4>
+                    <p>Improved invoicing accuracy and streamlined sales workflows.</p>
+                    <p><em>Code available upon request for serious inquiries.</em></p>
+                </div>
+                <a href="#contact" class="btn">Request Code Access</a>
             </div>
             <div class="project-card">
-                <img src="images/weight2.png" alt="Project 2"/>
-                <h3>Weight Filed to Sale Order Line complete</h3>
-                <p>
-                    the technologies that we use is python for model and overriding methods, xml for views , and qweb
-                    for reports.
-                </p>
+                <img src="images/sync1.png" alt="Button to connect with external system 1"/>
+                <img src="images/sync2.png" alt="Button to connect with external system 2"/>
+                <img src="images/sync3.png" alt="Button to connect with external system 3"/>
+                <h3>Script to Connect with External System</h3>
+                <div class="project-details">
+                    <h4>Problem</h4>
+                    <p>External System is recording expense for employee they need this reflect to odoo expense
+                        module.</p>
+                    <h4>Solution</h4>
+                    <p>The Company has external system where they record their expense and want a button in odoo that
+                        can fetch the data from external system to save in hr.expense and they want also to connect
+                        hr.expense with hr.employee with employee_code field, the button should be displayed in expense
+                        form view.</p>
+                    <h4>Technologies</h4>
+                    <ul>
+                        <li>Python: Model extensions</li>
+                        <li>XML: View inheritance</li>
+                        <li>QWeb: Report customization</li>
+                    </ul>
+                    <h4>Impact</h4>
+                    <p>Enhanced Button in expense form view allow the connection between Odoo and external system.</p>
+                    <p><em>Code available upon request for serious inquiries.</em></p>
+                </div>
+                <a href="#contact" class="btn">Request Code Access</a>
+            </div>
+            <div class="project-card">
+                <img src="images/recordrule1.png" alt="Client want restrict user access 1"/>
+                <img src="images/recordrule2.png" alt="Client want restrict user access 2"/>
+                <h3>User Access Right</h3>
+                <div class="project-details">
+                    <h4>Problem</h4>
+                    <p>Client wants users to see all view all the records created by the user itself or by other users
+                        and can have permission to it's only record not other users record.</p>
+                    <h4>Solution</h4>
+                    <p>Client has many users working in some department every user can insert several records, but he
+                        does not want the users can have access right to the records that is not belong to them, so we
+                        offer both approaches, to make the user view only his records or can view everyone records with
+                        limit of permission.</p>
+                    <h4>Technologies</h4>
+                    <ul>
+                        <li>XML: create category, groups and record rules</li>
+                        <li>model.access: link group to model</li>
+                        <li>QWeb: Report customization</li>
+                    </ul>
+                    <h4>Impact</h4>
+                    <p>User Restriction with limit permissions.</p>
+                    <p><em>Code available upon request for serious inquiries.</em></p>
+                </div>
+                <a href="#contact" class="btn">Request Code Access</a>
             </div>
         </div>
     </div>
@@ -77,7 +135,7 @@
     <div class="container">
         <h2>Contact Me</h2>
         <form action="https://formspree.io/f/xkgzldpw" method="POST" class="contact-form">
-            <input type="hidden" name="_redirect" value="https://ramiadil.github.io/portfolio/thank-you.html">
+            <input type="hidden" name="_next" value="https://ramiadil.github.io/thank-you.html">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" placeholder="Your Name" required>
             <label for="project">Project Name:</label>
@@ -102,6 +160,5 @@
     </div>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
