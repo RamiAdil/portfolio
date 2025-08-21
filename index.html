@@ -77,12 +77,17 @@
     <div class="container">
         <h2>Contact Me</h2>
         <form action="https://formspree.io/f/xkgzldpw" method="POST" class="contact-form">
-            <input type="hidden" name="_redirect" value="https://ramiadil.github.io/portfolio/thank-you.html">
-            <input type="text" name="name" placeholder="Your Name" required/>
-            <input type="text" name="project" placeholder="Project Name" required/>
-            <input type="tel" name="phone" placeholder="Phone Number" required/>
-            <input type="email" name="_replyto" placeholder="Email" required/>
-            <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+            <input type="hidden" name="_next" value="https://ramiadil.github.io/portfolio/thank-you.html">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <label for="project">Project Name:</label>
+            <input type="text" id="project" name="project" placeholder="Project Name" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <label for="message">Tell me about your project:</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
             <button type="submit" class="btn">Send Message</button>
         </form>
     </div>
