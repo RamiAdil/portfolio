@@ -12,7 +12,7 @@ body {
   top: 0; left: 0;
   width: 100%;
   background: #4b2e83; /* purple Odoo-inspired */
-  padding: 15px 0;
+  padding: 10px 0;
   z-index: 1000;
 }
 .nav-container {
@@ -22,16 +22,18 @@ body {
   width: 90%;
   margin: auto;
 }
-.logo img {
-  height: 40px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
 .logo {
+  display: flex;
+  align-items: center;
   color: #fff;
   font-weight: bold;
   text-decoration: none;
   font-size: 18px;
+}
+.logo-img {
+  height: 28px;   /* ✅ smaller logo */
+  margin-right: 8px;
+  vertical-align: middle;
 }
 .nav-links { list-style: none; display: flex; gap: 20px; }
 .nav-links a {
@@ -51,7 +53,7 @@ body {
   background: linear-gradient(to right, #4b2e83, #6a4dad);
   color: #fff;
   text-align: center;
-  padding-top: 60px; /* for navbar */
+  padding-top: 70px; /* for navbar */
 }
 .hero-content h1 span { color: #ffd700; }
 .hero .btn {
