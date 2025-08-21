@@ -31,7 +31,7 @@ body {
   font-size: 18px;
 }
 .logo-img {
-  height: 28px;
+  height: 60px;
   margin-right: 8px;
   vertical-align: middle;
   filter: brightness(0) invert(1); /* makes your logo white for contrast */
