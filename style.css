@@ -25,15 +25,16 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  color: #fff;
+  color: #ffd700; /* change logo text to gold */
   font-weight: bold;
   text-decoration: none;
   font-size: 18px;
 }
 .logo-img {
-  height: 28px;   /* ✅ smaller logo */
+  height: 28px;
   margin-right: 8px;
   vertical-align: middle;
+  filter: brightness(0) invert(1); /* makes your logo white for contrast */
 }
 .nav-links { list-style: none; display: flex; gap: 20px; }
 .nav-links a {
@@ -80,7 +81,9 @@ body {
 }
 .profile-pic {
   width: 150px;
+  height: 150px;
   border-radius: 50%;
+  object-fit: cover;
 }
 .about-text { max-width: 600px; }
 
