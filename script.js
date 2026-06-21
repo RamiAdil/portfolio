@@ -35,10 +35,11 @@ document.querySelectorAll('.project-card, .skill-card, .experience-card').forEac
 
 document.querySelectorAll('.gallery-thumb').forEach((thumb) => {
   thumb.addEventListener('click', () => {
-    const main = document.getElementById('bzone-main');
+    const gallery = thumb.closest('.project-gallery');
+    const main = gallery?.querySelector('.project-gallery-main img');
     if (!main) return;
 
-    document.querySelectorAll('.gallery-thumb').forEach((t) => t.classList.remove('active'));
+    gallery.querySelectorAll('.gallery-thumb').forEach((t) => t.classList.remove('active'));
     thumb.classList.add('active');
     main.style.opacity = '0';
     setTimeout(() => {
