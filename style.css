@@ -277,6 +277,13 @@ a { color: inherit; }
   margin-bottom: 20px;
 }
 
+.about-meta {
+  font-size: 0.95rem;
+  color: var(--purple-light);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
 .about-text p {
   color: var(--text-muted);
   margin-bottom: 16px;
