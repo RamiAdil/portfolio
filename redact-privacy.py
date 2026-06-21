@@ -9,6 +9,7 @@ BASE = '/root/portfolio/images/projects'
 # Absolute pixel boxes per image (x1, y1, x2, y2) — tuned per screenshot size.
 REDACTIONS = {
     'ajwaa/settings-whatsapp.png': [
+        (698, 25, 815, 44),    # hide "Evolution API" integration label
         (120, 55, 980, 115),   # status + instance URL
         (505, 105, 770, 145),  # test phone number
         (225, 218, 530, 258),  # login email
