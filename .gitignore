@@ -3,4 +3,5 @@ package-lock.json
 capture-screenshots.mjs
 capture-bayader.mjs
 capture-riada.mjs
+capture-bdc.mjs
 crop-screenshots.py

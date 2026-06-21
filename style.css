@@ -544,6 +544,15 @@ a { color: inherit; }
   transition: opacity 0.3s ease;
 }
 
+.project-gallery-main--tall {
+  aspect-ratio: 16 / 10;
+  max-height: 480px;
+}
+
+.project-gallery-main--tall img {
+  object-fit: contain;
+}
+
 .project-gallery-thumbs {
   display: flex;
   gap: 8px;
