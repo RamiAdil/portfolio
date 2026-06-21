@@ -2,3 +2,5 @@ node_modules/
 package-lock.json
 capture-screenshots.mjs
 capture-bayader.mjs
+capture-riada.mjs
+crop-screenshots.py
