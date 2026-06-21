@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+    <meta name="theme-color" content="#4b2e83"/>
     <title>Thank You | Rami Adil</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -10,13 +11,16 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<nav class="navbar">
+<nav class="navbar" id="navbar">
     <div class="container nav-container">
         <a href="index.html" class="logo">
             <img src="images/ramilogo.png" alt="Rami Adil" class="logo-img"/>
             <span>Rami Adil</span>
         </a>
-        <ul class="nav-links">
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
             <li><a href="index.html#about">About</a></li>
             <li><a href="index.html#projects">Projects</a></li>
             <li><a href="index.html#contact">Contact</a></li>
@@ -38,5 +42,6 @@
         <a href="https://github.com/RamiAdil" target="_blank" rel="noopener">GitHub</a>
     </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
