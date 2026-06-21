@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Redact personal data (phones, emails, names) from portfolio screenshots."""
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 import os
 
 BASE = '/root/portfolio/images/projects'
@@ -23,7 +23,7 @@ REDACTIONS = {
     'ajwaa/booking-detail.png': [
         (720, 342, 1024, 360), # footer
         (500, 268, 1010, 340), # pilgrims table (names / mobile)
-        (60, 150, 250, 290),   # QR code (booking + client data)
+        ('blur', 685, 148, 820, 268),  # QR code — unscannable
     ],
     'ajwaa/purchases-bookings.png': [
         (650, 325, 1024, 360), # footer
@@ -59,6 +59,21 @@ def fill_region(img, box, color=(236, 239, 243)):
     draw.rectangle(box, fill=color)
 
 
+def blur_region(img, box, pixel_scale=12, blur_radius=6):
+    x1, y1, x2, y2 = box
+    region = img.crop((x1, y1, x2, y2))
+    if region.width < 2 or region.height < 2:
+        return
+    small = region.resize(
+        (max(1, region.width // pixel_scale), max(1, region.height // pixel_scale)),
+        Image.Resampling.BILINEAR,
+    )
+    blocked = small.resize(region.size, Image.Resampling.NEAREST)
+    blocked = blocked.filter(ImageFilter.GaussianBlur(radius=blur_radius))
+    img.paste(blocked, (x1, y1))
+
+
+# (x1, y1, x2, y2) or ('blur', x1, y1, x2, y2)
 FOOTER_BOX_RATIO = (0.62, -42, 1.0, 0)  # right sidebar footer strip
 
 
@@ -73,7 +88,10 @@ def redact_footer(img):
 def redact_image(path, boxes, strip_footer=True):
     img = Image.open(path).convert('RGB')
     for box in boxes:
-        fill_region(img, box)
+        if isinstance(box, tuple) and len(box) == 5 and box[0] == 'blur':
+            blur_region(img, box[1:])
+        else:
+            fill_region(img, box)
     if strip_footer:
         redact_footer(img)
     img.save(path, optimize=True)
